@@ -10,4 +10,18 @@ $('.collection-item').on('click', function() {
 
 });
 
+$('#confirm').on('click', function() {
+
+    var text = '';
+
+    $('.badge').parent().each(function() {
+        var product = this.firstChild.textContent;
+        var quantity = this.lastChild.textContent;
+
+        text += product + ': ' + quantity + ', ';
+    });
+
+    $('#summary').text(text);
+});
+
 $('.modal-trigger').leanModal();
