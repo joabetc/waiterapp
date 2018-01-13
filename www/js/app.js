@@ -9,3 +9,5 @@ $('.collection-item').on('click', function() {
     $badge.text(parseInt($badge.text()) + 1);
 
 });
+
+$('.modal-trigger').leanModal();
