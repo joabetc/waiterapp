@@ -57,7 +57,7 @@ $('.action-confirm').click(function() {
             pedido: $('#summary').text()
         },
         success: function(response) {
-            Materialize.toast(response.text, 2000);
+            Materialize.toast(response, 2000);
             $('#table-number').val('');
             $('.badge').remove();
         },
