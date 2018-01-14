@@ -8,6 +8,8 @@ $('.collection-item').on('click', function() {
 
     $badge.text(parseInt($badge.text()) + 1);
 
+    var productName = this.firstChild.textContent;
+    Materialize.toast(productName + ' added', 1000);
 });
 
 $('#confirm').on('click', function() {
@@ -34,4 +36,4 @@ $('.collection').on('click', '.badge', function() {
 $('.action-clean').on('click', function() {
     $('.table-number').val('');
     $('.badge').remove();
-})
+});
