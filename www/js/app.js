@@ -37,3 +37,9 @@ $('.action-clean').on('click', function() {
     $('.table-number').val('');
     $('.badge').remove();
 });
+
+$('.scan-qrcode').click(function() {
+    cordova.plugins.barcodeScanner.scan(function(result) {
+        alert(result.text);
+    });
+})
