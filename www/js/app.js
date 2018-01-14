@@ -34,18 +34,17 @@ $('.collection').on('click', '.badge', function() {
 });
 
 $('.action-clean').on('click', function() {
-    $('.table-number').val('');
+    $('#table-number').val('');
     $('.badge').remove();
 });
 
 $('.scan-qrcode').click(function() {
     cordova.plugins.barcodeScanner.scan(function(result) {
         if (result.text) {
-            Materialize.toast('Table ' + resul.text, 2000);
+            Materialize.toast('Table ' + result.text, 2000);
             $('#table-number').val(result.text);
         }
-    },
-    function(error) {
+    }, function(error) {
         Materialize.toast('Erro ' + error, 2000, 'red-text');
     });
 })
