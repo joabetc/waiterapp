@@ -40,6 +40,8 @@ $('.action-clean').on('click', function() {
 
 $('.scan-qrcode').click(function() {
     cordova.plugins.barcodeScanner.scan(function(result) {
-        Materialize.toast('Table ' + resul.text, 2000);
+        if (result.text) {
+            Materialize.toast('Table ' + resul.text, 2000);
+        }
     });
 })
