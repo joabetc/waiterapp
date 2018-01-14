@@ -29,4 +29,9 @@ $('.modal-trigger').leanModal();
 $('.collection').on('click', '.badge', function() {
     $(this).remove();
     return false;
+});
+
+$('.action-clean').on('click', function() {
+    $('.table-number').val('');
+    $('.badge').remove();
 })
