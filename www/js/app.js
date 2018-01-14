@@ -42,6 +42,7 @@ $('.scan-qrcode').click(function() {
     cordova.plugins.barcodeScanner.scan(function(result) {
         if (result.text) {
             Materialize.toast('Table ' + resul.text, 2000);
+            $('#table-number').val(result.text);
         }
     });
 })
