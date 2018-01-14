@@ -44,5 +44,8 @@ $('.scan-qrcode').click(function() {
             Materialize.toast('Table ' + resul.text, 2000);
             $('#table-number').val(result.text);
         }
+    },
+    function(error) {
+        Materialize.toast('Erro ' + error, 2000, 'red-text');
     });
 })
